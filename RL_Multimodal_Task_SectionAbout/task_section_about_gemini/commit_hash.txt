@@ -1,3 +1,3 @@
-In this task, you will create multimodal bug-fix conversations using Gemini 3.8 Flash.
+In this task, you will create multimodal section_about in html conversations using Gemini 3.8 Flash.
 
 prompt:I am going to attach an image, and I would like you to create an HTML section styled with Tailwind CSS in the current folder. Please be as faithful as possible to all elements in the image, such as fonts, colors, and lighting. I also want the section to be responsive. Finally, please create a file named `index.html` so I can view your creation.
