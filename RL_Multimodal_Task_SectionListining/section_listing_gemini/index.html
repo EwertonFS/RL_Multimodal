@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Latest Property Listings</title>
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandDark: '#0c0c0c',
+            brandBlue: '#1d44f9',
+            brandHover: '#1638d4',
+            brandMuted: '#888888',
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #0c0c0c;
+      color: #ffffff;
+      font-family: 'Plus Jakarta Sans', Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+  </style>
+</head>
+<body class="bg-[#0c0c0c] text-white min-h-screen selection:bg-blue-600 selection:text-white">
+
+  <!-- Main Section Wrapper -->
+  <section class="w-full bg-[#0c0c0c]">
+    <div class="w-full max-w-[932px] mx-auto pl-[21px] pr-[28px] pt-[13px] pb-[48px]">
+
+      <!-- Header Section -->
+      <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-[66px]">
+        <!-- Title & Subtitle -->
+        <div class="pt-[0px]">
+          <h2 class="text-[35px] font-extrabold text-white tracking-[-0.015em] leading-none">
+            Latest Property Listings
+          </h2>
+          <p class="text-[#888888] text-[13.5px] mt-[20px] tracking-normal font-normal leading-none">
+            Lorem ipsum dolor sit amet, consectetur adipiscing.
+          </p>
+        </div>
+
+        <!-- Explore All Listings Button -->
+        <a href="#explore" class="inline-flex items-center justify-center gap-2 bg-[#1d44f9] hover:bg-[#1638d4] text-white text-[12.5px] font-semibold w-[156px] h-[37px] rounded-lg transition-colors duration-200 shrink-0 self-start shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-[#0c0c0c]">
+          <span>Explore All Listings</span>
+          <svg class="w-3.5 h-3.5 stroke-[2.2] translate-y-[0.5px]" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="2" y1="8" x2="13" y2="8" />
+            <polyline points="9 4 13 8 9 12" />
+          </svg>
+        </a>
+      </div>
+
+      <!-- Listings Grid (3 Columns on desktop >= 880px, 2 on tablet, 1 on mobile) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 min-[880px]:grid-cols-3 gap-[22px]">
+
+        <!-- Property Card 1 -->
+        <div class="group flex flex-col cursor-pointer">
+          <!-- Card Image Container -->
+          <div class="relative w-full aspect-[280/226] rounded-2xl overflow-hidden bg-zinc-900 shadow-md">
+            <img src="card1.jpg" alt="The Mysterious Mansion" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+            <!-- Price Badge -->
+            <div class="absolute top-[15px] right-[15px] w-[74px] h-[37px] bg-black rounded-[10px] flex items-center justify-center text-white font-bold text-[14px] tracking-tight shadow-md select-none border border-white/5">
+              $1.3m
+            </div>
+          </div>
+
+          <!-- Card Content -->
+          <div class="mt-[20px]">
+            <h3 class="text-white font-bold text-[21.5px] leading-tight group-hover:text-blue-400 transition-colors duration-200">
+              The Mysterious Mansion
+            </h3>
+            <p class="text-[#888888] text-[13px] mt-[15px] leading-none">
+              228 Park Ave S, NY, 10003-1502, USA
+            </p>
+            <div class="flex items-center justify-between text-[13px] mt-[19px] text-nowrap">
+              <div>
+                <span class="text-[#888888]">Bedroom:</span>
+                <span class="text-white font-bold ml-1">3</span>
+              </div>
+              <div>
+                <span class="text-[#888888]">Bathroom:</span>
+                <span class="text-white font-bold ml-1">5</span>
+              </div>
+              <div>
+                <span class="text-[#888888]">Area:</span>
+                <span class="text-white font-bold ml-1">1230 Sft.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Property Card 2 -->
+        <div class="group flex flex-col cursor-pointer">
+          <!-- Card Image Container -->
+          <div class="relative w-full aspect-[280/226] rounded-2xl overflow-hidden bg-zinc-900 shadow-md">
+            <img src="card2.jpg" alt="The Mysterious Mansion" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+            <!-- Price Badge -->
+            <div class="absolute top-[15px] right-[15px] w-[74px] h-[37px] bg-black rounded-[10px] flex items-center justify-center text-white font-bold text-[14px] tracking-tight shadow-md select-none border border-white/5">
+              $650k
+            </div>
+          </div>
+
+          <!-- Card Content -->
+          <div class="mt-[20px]">
+            <h3 class="text-white font-bold text-[21.5px] leading-tight group-hover:text-blue-400 transition-colors duration-200">
+              The Mysterious Mansion
+            </h3>
+            <p class="text-[#888888] text-[13px] mt-[15px] leading-none">
+              228 Park Ave S, NY, 10003-1502, USA
+            </p>
+            <div class="flex items-center justify-between text-[13px] mt-[19px] text-nowrap">
+              <div>
+                <span class="text-[#888888]">Bedroom:</span>
+                <span class="text-white font-bold ml-1">3</span>
+              </div>
+              <div>
+                <span class="text-[#888888]">Bathroom:</span>
+                <span class="text-white font-bold ml-1">5</span>
+              </div>
+              <div>
+                <span class="text-[#888888]">Area:</span>
+                <span class="text-white font-bold ml-1">1230 Sft.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Property Card 3 -->
+        <div class="group flex flex-col cursor-pointer">
+          <!-- Card Image Container -->
+          <div class="relative w-full aspect-[280/226] rounded-2xl overflow-hidden bg-zinc-900 shadow-md">
+            <img src="card3.jpg" alt="The Mysterious Mansion" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+            <!-- Price Badge -->
+            <div class="absolute top-[15px] right-[15px] w-[74px] h-[37px] bg-black rounded-[10px] flex items-center justify-center text-white font-bold text-[14px] tracking-tight shadow-md select-none border border-white/5">
+              $800k
+            </div>
+          </div>
+
+          <!-- Card Content -->
+          <div class="mt-[20px]">
+            <h3 class="text-white font-bold text-[21.5px] leading-tight group-hover:text-blue-400 transition-colors duration-200">
+              The Mysterious Mansion
+            </h3>
+            <p class="text-[#888888] text-[13px] mt-[15px] leading-none">
+              228 Park Ave S, NY, 10003-1502, USA
+            </p>
+            <div class="flex items-center justify-between text-[13px] mt-[19px] text-nowrap">
+              <div>
+                <span class="text-[#888888]">Bedroom:</span>
+                <span class="text-white font-bold ml-1">3</span>
+              </div>
+              <div>
+                <span class="text-[#888888]">Bathroom:</span>
+                <span class="text-white font-bold ml-1">5</span>
+              </div>
+              <div>
+                <span class="text-[#888888]">Area:</span>
+                <span class="text-white font-bold ml-1">1230 Sft.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
