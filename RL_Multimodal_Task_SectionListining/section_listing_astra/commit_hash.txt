@@ -1,0 +1,9 @@
+In this task, you will create multimodal section_Listinin in html conversations using astra default.
+
+prompt:› I want you to use the attached image as a reference to
+  create an HTML section styled with Tailwind CSS. It needs
+  to be responsive and include all the elements shown in the
+  image, such as icons, buttons, fonts, and colors. Then,
+  create an HTML file here so I can view your creation.[Image
+  #1]
+
