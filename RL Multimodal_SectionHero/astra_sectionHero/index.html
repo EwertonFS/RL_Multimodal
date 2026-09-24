@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Hi, I’m Travis-Lee. I help buyers, sellers, and investors navigate the Dallas real estate market with confidence." />
+    <meta name="theme-color" content="#0d1117" />
+    <title>Hi, I’m Travis-Lee | Dallas Real Estate</title>
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+            },
+            keyframes: {
+              navFadeDown: {
+                '0%': { opacity: '0', transform: 'translateY(-14px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              heroFadeUp: {
+                '0%': { opacity: '0', transform: 'translateY(18px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              heroFadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              scrollBounce: {
+                '0%, 100%': { transform: 'translateY(0)', opacity: '1' },
+                '50%': { transform: 'translateY(4px)', opacity: '0.35' },
+              },
+            },
+            animation: {
+              'nav-load': 'navFadeDown 0.75s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+              'title-load': 'heroFadeUp 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.12s forwards',
+              'subtitle-load': 'heroFadeUp 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.24s forwards',
+              'buttons-load': 'heroFadeUp 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.36s forwards',
+              'scroll-load': 'heroFadeIn 1s cubic-bezier(0.16, 1, 0.3, 1) 0.48s forwards',
+              'scroll-bounce': 'scrollBounce 1.6s ease-in-out infinite',
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        ::before,
+        ::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+          scroll-behavior: auto !important;
+        }
+      }
+    </style>
+  </head>
+  <body class="m-0 bg-[#0d1117] text-white antialiased font-sans selection:bg-white selection:text-neutral-900">
+    <!-- Accessibility Skip Link -->
+    <a href="#hero-content" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:px-3 focus:py-1.5 focus:bg-white focus:text-neutral-900 focus:font-semibold focus:shadow-lg focus:outline-none text-xs">
+      Skip to main content
+    </a>
+
+    <!-- Top Transparent Navigation Bar -->
+    <header class="absolute inset-x-0 top-0 z-30 flex h-[clamp(66px,9.4vw,84px)] items-center justify-between px-[clamp(18px,3.33vw,48px)] animate-nav-load">
+      <!-- Brand Logo: Exact TLM Vector Graphic -->
+      <a href="#hero" aria-label="TLM Real Estate - Home" class="group flex items-center transition-opacity hover:opacity-85 focus:outline-none focus:ring-1 focus:ring-white/70">
+        <svg viewBox="0 0 35 19" class="h-[clamp(18px,2.5vw,25px)] w-auto fill-current text-white" aria-hidden="true">
+          <!-- T -->
+          <path d="M 0,0 H 14 V 4 H 9 V 18 H 5 V 4 H 0 Z" />
+          <!-- L -->
+          <path d="M 10.5,3.5 H 14.5 V 14.5 H 34.5 V 18 H 10.5 Z" />
+          <!-- M -->
+          <path d="M 15.5,0 H 19.5 L 25,8.5 L 30.5,0 H 34.5 V 13.5 H 31 V 4.5 L 26.5,11 H 23.5 L 19,4.5 V 13.5 H 15.5 Z" />
+        </svg>
+      </a>
+
+      <!-- Desktop Navigation Menu Items with Dividers -->
+      <nav aria-label="Main Navigation" class="hidden min-[620px]:flex items-center gap-[clamp(10px,1.6vw,24px)] text-[clamp(8px,1.2vw,11px)] font-medium uppercase tracking-[0.14em] text-white/90">
+        <a href="#about" class="transition-colors hover:text-white py-1">About</a>
+        <span class="text-white/20 select-none text-[clamp(8px,1.2vw,11px)]" aria-hidden="true">|</span>
+        <a href="#international" class="transition-colors hover:text-white py-1">International Real Estate</a>
+        <span class="text-white/20 select-none text-[clamp(8px,1.2vw,11px)]" aria-hidden="true">|</span>
+        <a href="#buy-sell" class="transition-colors hover:text-white py-1">Buy &amp; Sell</a>
+        <span class="text-white/20 select-none text-[clamp(8px,1.2vw,11px)]" aria-hidden="true">|</span>
+        <a href="#contact" class="transition-colors hover:text-white py-1">Contact</a>
+      </nav>
+
+      <!-- Right Action Area: Let's Connect & Menu Toggle Button -->
+      <div class="flex items-center gap-[clamp(8px,1.4vw,14px)]">
+        <a href="#contact" class="flex h-[clamp(23px,3.2vw,36px)] w-[clamp(80px,11.8vw,120px)] items-center justify-center bg-white text-neutral-900 font-semibold text-[clamp(7.5px,1.1vw,11px)] uppercase tracking-[0.12em] transition-colors duration-200 hover:bg-neutral-200 focus:outline-none focus:ring-1 focus:ring-white">
+          Let’s Connect
+        </a>
+        <button
+          id="menu-toggle-btn"
+          type="button"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          aria-controls="mobile-drawer"
+          class="grid h-[clamp(23px,3.2vw,36px)] w-[clamp(23px,3.3vw,36px)] place-items-center border border-white/40 text-white transition-colors duration-200 hover:border-white focus:outline-none focus:ring-1 focus:ring-white"
+        >
+          <span class="flex w-[clamp(10px,1.6vw,14px)] flex-col gap-[clamp(2.5px,0.45vw,4px)]">
+            <span class="h-[1px] sm:h-[1.5px] w-full bg-white transition-transform duration-200"></span>
+            <span class="h-[1px] sm:h-[1.5px] w-full bg-white transition-transform duration-200"></span>
+          </span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main id="hero" class="relative isolate flex min-h-[100svh] w-full items-center justify-center overflow-hidden px-4 sm:px-6">
+      <!-- Architectural Backdrop Image with Fallbacks -->
+      <div
+        aria-hidden="true"
+        class="absolute inset-0 -z-30 bg-cover bg-center bg-no-repeat"
+        style="background-image: url('./hero-bg.png'), url('./section_hero_img.png');"
+      ></div>
+
+      <!-- Atmospheric Tonal & Contrast Overlays -->
+      <div aria-hidden="true" class="absolute inset-0 -z-20 bg-[#0d1117]/60"></div>
+      <div aria-hidden="true" class="absolute inset-0 -z-10 bg-gradient-to-b from-[#0b0e14]/50 via-transparent to-[#0b0e14]/65"></div>
+
+      <!-- Hero Center Copy & CTAs -->
+      <section id="hero-content" class="relative z-10 mx-auto max-w-4xl text-center flex flex-col items-center pt-2 sm:pt-2.5">
+        <!-- Main Heading: Exact font styling and color -->
+        <h1 class="animate-title-load whitespace-nowrap text-[clamp(1.85rem,5.28vw,3.75rem)] font-normal leading-none tracking-[-0.03em] text-white">
+          Hi, I’m Travis-Lee
+        </h1>
+
+        <!-- Subheading -->
+        <p class="animate-subtitle-load mx-auto mt-[clamp(12px,2.1vw,20px)] max-w-2xl whitespace-nowrap text-[clamp(8.5px,1.5vw,15px)] font-normal leading-relaxed text-white/85">
+          I help buyers, sellers, and investors navigate the Dallas real estate market with confidence.
+        </p>
+
+        <!-- Twin CTA Buttons with Matching Proportions -->
+        <div class="animate-buttons-load mt-[clamp(11px,2.5vw,24px)] flex items-center justify-center gap-[clamp(8px,1.67vw,16px)] w-full">
+          <a
+            href="#listings"
+            class="flex h-[clamp(23px,3.2vw,42px)] w-[clamp(130px,19.4vw,200px)] items-center justify-center border border-white text-[clamp(7.5px,1.1vw,11px)] font-medium uppercase tracking-[0.12em] text-white transition-colors duration-200 hover:bg-white hover:text-neutral-900 focus:outline-none focus:ring-1 focus:ring-white"
+          >
+            Browse Listings
+          </a>
+          <a
+            href="#consultation"
+            class="flex h-[clamp(23px,3.2vw,42px)] w-[clamp(130px,19.4vw,200px)] items-center justify-center border border-white bg-white text-[clamp(7.5px,1.1vw,11px)] font-semibold uppercase tracking-[0.12em] text-neutral-900 transition-colors duration-200 hover:bg-neutral-200 hover:border-neutral-200 focus:outline-none focus:ring-1 focus:ring-white"
+          >
+            Schedule a Consultation
+          </a>
+        </div>
+      </section>
+
+      <!-- Scroll Indicator with Mouse Wheel Animation -->
+      <a
+        href="#about"
+        aria-label="Scroll to discover more content"
+        class="animate-scroll-load absolute bottom-[clamp(12px,1.8vw,22px)] left-1/2 flex -translate-x-1/2 flex-col items-center gap-[3px] text-[clamp(6px,0.85vw,8px)] font-medium uppercase tracking-[0.06em] text-white/85 transition-colors duration-200 hover:text-white focus:outline-none focus:ring-1 focus:ring-white/50"
+      >
+        <span class="flex h-[13px] sm:h-[15px] lg:h-[18px] w-[9px] sm:w-[10px] lg:w-[12px] items-start justify-center rounded-full border border-white/70 p-[1.5px]">
+          <span class="animate-scroll-bounce h-[3px] sm:h-[3.5px] w-[1.5px] rounded-full bg-white"></span>
+        </span>
+        <span class="whitespace-nowrap">Scroll More</span>
+      </a>
+
+      <!-- Right Edge Accessibility Quick Trigger Widget -->
+      <button
+        type="button"
+        id="a11y-widget"
+        aria-label="Accessibility options"
+        class="fixed right-0 top-1/2 -translate-y-1/2 z-20 flex h-[clamp(26px,3.8vw,36px)] w-[clamp(18px,2.6vw,26px)] items-center justify-center rounded-l-full border-y border-l border-white/20 bg-black/40 text-white/75 backdrop-blur-sm transition-all hover:bg-black/70 hover:text-white focus:outline-none focus:ring-1 focus:ring-white"
+      >
+        <svg viewBox="0 0 24 24" class="h-3 w-3 sm:h-3.5 sm:w-3.5 fill-current" aria-hidden="true">
+          <circle cx="12" cy="4" r="2" />
+          <path d="M19 13v-2c-1.54.02-3.09-.75-4.07-1.83l-1.29-1.43c-.4-.44-1-.74-1.64-.74-.64 0-1.24.3-1.64.74L9.07 9.17C8.09 10.25 6.54 11.02 5 11v2c1.86-.02 3.65-.96 4.79-2.22l.21-.24V20h2v-6h2v6h2v-9.46l.21.24C17.35 12.04 19.14 12.98 21 13h-2z"/>
+        </svg>
+      </button>
+    </main>
+
+    <!-- Interactive Navigation Drawer (Mobile & Expanded View) -->
+    <div id="mobile-overlay" class="fixed inset-0 z-40 bg-black/70 opacity-0 pointer-events-none transition-opacity duration-300 backdrop-blur-sm" aria-hidden="true"></div>
+    <aside
+      id="mobile-drawer"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Navigation drawer"
+      aria-hidden="true"
+      inert
+      class="fixed inset-y-0 right-0 z-50 flex w-full max-w-sm translate-x-full flex-col justify-between bg-[#11161d] p-6 sm:p-8 transition-transform duration-300 ease-out border-l border-white/10"
+    >
+      <!-- Drawer Top Bar -->
+      <div>
+        <div class="flex items-center justify-between pb-6 border-b border-white/10">
+          <svg viewBox="0 0 35 19" class="h-[22px] w-auto fill-current text-white" aria-hidden="true">
+            <path d="M 0,0 H 14 V 4 H 9 V 18 H 5 V 4 H 0 Z" />
+            <path d="M 10.5,3.5 H 14.5 V 14.5 H 34.5 V 18 H 10.5 Z" />
+            <path d="M 15.5,0 H 19.5 L 25,8.5 L 30.5,0 H 34.5 V 13.5 H 31 V 4.5 L 26.5,11 H 23.5 L 19,4.5 V 13.5 H 15.5 Z" />
+          </svg>
+          <button
+            id="close-drawer-btn"
+            type="button"
+            aria-label="Close navigation menu"
+            class="grid h-8 w-8 place-items-center text-white/70 hover:text-white transition-colors focus:outline-none focus:ring-1 focus:ring-white"
+          >
+            <svg viewBox="0 0 24 24" class="h-5 w-5 stroke-current stroke-2" fill="none">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Drawer Links List -->
+        <nav class="mt-8 flex flex-col gap-5 text-sm font-medium uppercase tracking-[0.16em]">
+          <a href="#about" class="drawer-link text-white/80 transition-colors hover:text-white py-1">About</a>
+          <a href="#international" class="drawer-link text-white/80 transition-colors hover:text-white py-1">International Real Estate</a>
+          <a href="#buy-sell" class="drawer-link text-white/80 transition-colors hover:text-white py-1">Buy &amp; Sell</a>
+          <a href="#contact" class="drawer-link text-white/80 transition-colors hover:text-white py-1">Contact</a>
+        </nav>
+      </div>
+
+      <!-- Drawer Bottom Actions & Information -->
+      <div class="space-y-6 pt-6 border-t border-white/10">
+        <a
+          href="#contact"
+          class="drawer-link flex h-[42px] w-full items-center justify-center bg-white text-[11px] font-semibold uppercase tracking-[0.14em] text-neutral-900 transition-colors hover:bg-neutral-200"
+        >
+          Let’s Connect
+        </a>
+        <div class="text-[11px] text-white/50 space-y-1">
+          <p class="font-medium text-white/80">Travis-Lee Real Estate Advisory</p>
+          <p>Dallas, Texas</p>
+          <p>travis@tlmrealestate.com</p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Interactive Navigation Drawer Script -->
+    <script>
+      (function () {
+        const toggleBtn = document.getElementById('menu-toggle-btn');
+        const closeBtn = document.getElementById('close-drawer-btn');
+        const drawer = document.getElementById('mobile-drawer');
+        const overlay = document.getElementById('mobile-overlay');
+        const drawerLinks = document.querySelectorAll('.drawer-link');
+
+        function openDrawer() {
+          drawer.classList.remove('translate-x-full');
+          overlay.classList.remove('opacity-0', 'pointer-events-none');
+          drawer.setAttribute('aria-hidden', 'false');
+          drawer.inert = false;
+          toggleBtn.setAttribute('aria-expanded', 'true');
+          closeBtn.focus();
+          document.body.style.overflow = 'hidden';
+        }
+
+        function closeDrawer({ restoreFocus = true } = {}) {
+          drawer.classList.add('translate-x-full');
+          overlay.classList.add('opacity-0', 'pointer-events-none');
+          drawer.setAttribute('aria-hidden', 'true');
+          drawer.inert = true;
+          toggleBtn.setAttribute('aria-expanded', 'false');
+          if (restoreFocus) toggleBtn.focus();
+          document.body.style.overflow = '';
+        }
+
+        toggleBtn.addEventListener('click', openDrawer);
+        closeBtn.addEventListener('click', closeDrawer);
+        overlay.addEventListener('click', closeDrawer);
+
+        drawerLinks.forEach((link) => {
+          link.addEventListener('click', closeDrawer);
+        });
+
+        window.addEventListener('keydown', (e) => {
+          if (drawer.getAttribute('aria-hidden') !== 'false') return;
+          if (e.key === 'Escape') {
+            e.preventDefault();
+            closeDrawer();
+          } else if (e.key === 'Tab') {
+            const focusable = [...drawer.querySelectorAll('a[href], button:not([disabled])')];
+            const first = focusable[0];
+            const last = focusable[focusable.length - 1];
+            if (e.shiftKey && document.activeElement === first) {
+              e.preventDefault();
+              last.focus();
+            } else if (!e.shiftKey && document.activeElement === last) {
+              e.preventDefault();
+              first.focus();
+            }
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>
