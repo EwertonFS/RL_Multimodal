@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth bg-[#0a0a0a]">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Delivering excellence in real estate - Marcus Elliman, Licensed Real Estate Agent in Manhattan, NY." />
+  <meta name="theme-color" content="#0a0a0a" />
+  <title>About | Marcus Elliman — Manhattan Real Estate</title>
+
+  <!-- Google Fonts: Newsreader (Editorial Serif) & Plus Jakarta Sans (Clean Modern Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        screens: {
+          'xs': '475px',
+          'sm': '640px',
+          'md': '768px',
+          'lg': '1024px',
+          'xl': '1280px',
+          '2xl': '1536px',
+        },
+        extend: {
+          fontFamily: {
+            serif: ['Newsreader', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'system-ui', '-apple-system', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              black: '#0a0a0a',
+              terracotta: '#C85A38',
+              label: '#828282',
+              body: '#cfcfcf',
+              agent: '#868686',
+            }
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0', transform: 'translateY(8px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+          },
+          animation: {
+            'fade-in': 'fadeIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    /* Base rendering enhancements */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    html, body {
+      background-color: #0a0a0a;
+      color: #ffffff;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+    
+    .font-newsreader {
+      font-family: 'Newsreader', Georgia, serif;
+      font-variation-settings: 'opsz' 36;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, ::before, ::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-[#0a0a0a] min-h-screen text-white font-sans antialiased flex flex-col justify-center selection:bg-[#C85A38] selection:text-white">
+
+  <!-- About Section -->
+  <main class="w-full min-h-screen flex items-center sm:items-start justify-center pt-8 sm:pt-[14px] lg:pt-16 pb-8 sm:pb-6 lg:pb-16 px-4 sm:px-[12px] lg:px-8 box-border">
+    <section 
+      aria-labelledby="about-heading" 
+      class="relative w-full max-w-[720px] lg:max-w-[1020px] xl:max-w-[1100px] mx-auto animate-fade-in"
+    >
+      
+      <!-- Top Navigation Carousel Buttons (Upper Right) -->
+      <nav aria-label="Agent gallery navigation" class="flex justify-end items-center gap-[6px] lg:gap-2 pr-1 sm:pr-[10px] lg:pr-1 mb-5 sm:mb-[22px] lg:mb-7">
+        <button 
+          type="button" 
+          aria-label="Previous profile" 
+          class="group w-[30px] h-[30px] lg:w-9 lg:h-9 rounded-full bg-[#050505] border border-white/[0.04] shadow-[0_2px_8px_rgba(0,0,0,0.8)] flex items-center justify-center text-[#737373] hover:text-white hover:bg-neutral-900 hover:border-white/10 transition-all duration-200 focus:outline-none focus:ring-1 focus:ring-white/30 active:scale-95 cursor-pointer"
+        >
+          <svg class="w-3.5 h-3.5 lg:w-4 lg:h-4 transition-transform duration-200 group-hover:-translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+        <button 
+          type="button" 
+          aria-label="Next profile" 
+          class="group w-[30px] h-[30px] lg:w-9 lg:h-9 rounded-full bg-[#050505] border border-white/[0.04] shadow-[0_2px_8px_rgba(0,0,0,0.8)] flex items-center justify-center text-[#737373] hover:text-white hover:bg-neutral-900 hover:border-white/10 transition-all duration-200 focus:outline-none focus:ring-1 focus:ring-white/30 active:scale-95 cursor-pointer"
+        >
+          <svg class="w-3.5 h-3.5 lg:w-4 lg:h-4 transition-transform duration-200 group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </nav>
+
+      <!-- Section Main Content -->
+      <div class="flex flex-col sm:flex-row items-center sm:items-start justify-start gap-8 sm:gap-[125px] lg:gap-16 xl:gap-24">
+        
+        <!-- Left Column: Portrait & Agent Metadata -->
+        <figure class="w-full max-w-[280px] sm:max-w-none sm:w-[232px] lg:w-[315px] xl:w-[345px] flex-shrink-0 m-0">
+          <!-- Portrait Frame -->
+          <div class="w-full aspect-[232/287] bg-[#111111] overflow-hidden shadow-2xl ring-1 ring-white/[0.02]">
+            <img 
+              src="marcus_portrait.png"
+              srcset="marcus_portrait.png 1x, marcus_portrait@2x.png 2x" 
+              alt="Portrait of Marcus Elliman"
+              width="232"
+              height="287"
+              class="w-full h-full object-cover object-center block"
+              loading="eager"
+            />
+          </div>
+
+          <!-- Captions / Credentials Bar -->
+          <figcaption class="flex items-center justify-between mt-3.5 sm:mt-[15px] lg:mt-4 w-full">
+            <h3 class="text-[13px] sm:text-[12px] lg:text-[14.5px] font-medium text-white tracking-tight leading-none whitespace-nowrap">
+              Marcus Elliman
+            </h3>
+            <div class="text-right flex flex-col items-end leading-none">
+              <span class="text-[8.5px] sm:text-[7.5px] lg:text-[9.5px] font-medium tracking-[0.11em] text-[#868686] uppercase">
+                Licensed Real Estate Agent
+              </span>
+              <span class="text-[8.5px] sm:text-[7.5px] lg:text-[9.5px] font-medium tracking-[0.11em] text-[#868686] uppercase mt-[3px]">
+                Manhattan, NY
+              </span>
+            </div>
+          </figcaption>
+        </figure>
+
+        <!-- Right Column: Editorial About Content -->
+        <article class="w-full max-w-[420px] sm:max-w-none sm:w-[343px] lg:w-[480px] xl:w-[530px] flex-shrink-0 pt-0.5 sm:pt-[1px]">
+          
+          <!-- Category Kicker -->
+          <span class="text-[8.5px] sm:text-[7.5px] lg:text-[9.5px] font-medium tracking-[0.22em] text-[#868686] uppercase block mb-3.5 sm:mb-[15px] lg:mb-4">
+            About
+          </span>
+
+          <!-- Main Editorial Heading -->
+          <h2 id="about-heading" class="font-newsreader text-[28px] sm:text-[25.5px] lg:text-[38px] xl:text-[44px] font-normal text-white leading-[1.10] tracking-[-0.015em] mb-5 sm:mb-[17px] lg:mb-7">
+            Delivering excellence<br />in real estate
+          </h2>
+
+          <!-- Narrative Body Copy -->
+          <div class="text-[#cfcfcf] text-[12px] sm:text-[10px] lg:text-[13px] xl:text-[13.5px] leading-[1.55] sm:leading-[1.47] lg:leading-[1.62] font-normal sm:w-[343px] space-y-4 sm:space-y-[16px] lg:space-y-6">
+            <p>
+              Real estate is more than property. It is about understanding the market, seeing opportunities clearly, and knowing when the right decision requires patience, precision, or a different perspective. We work closely with our clients to understand what matters to them, combining local market knowledge with thoughtful strategy and honest advice. From the first conversation to the final closing, every detail is handled with care, clear communication, and a focus on achieving the best possible outcome.
+            </p>
+            <p>
+              We believe the best results come from strong relationships and a clear, considered approach. No unnecessary pressure, no shortcuts, just experienced guidance focused on what matters most to you.
+            </p>
+          </div>
+
+          <!-- Interactive Action / Link -->
+          <div class="mt-6 sm:mt-[18px] lg:mt-7">
+            <a 
+              href="#learn-more" 
+              class="group inline-flex items-center gap-[7px] lg:gap-2 text-white hover:text-white transition-colors duration-200 focus:outline-none focus:ring-1 focus:ring-white/20 rounded-sm"
+            >
+              <!-- Terracotta Accent Bar -->
+              <span class="w-[2px] h-[11px] lg:h-[14px] bg-[#C85A38] inline-block transition-transform duration-200 group-hover:scale-y-125 origin-center"></span>
+              <span class="text-[12px] sm:text-[10px] lg:text-[13px] font-medium tracking-normal text-white group-hover:text-neutral-200 transition-colors duration-200">
+                Learn more
+              </span>
+            </a>
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+  </main>
+
+</body>
+</html>
