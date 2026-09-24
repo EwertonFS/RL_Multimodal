@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#15191f" />
+    <title>Travis-Lee | Dallas Real Estate</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <style>
+      html { font-family: Inter, Arial, sans-serif; }
+      @keyframes rise-in { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+      @keyframes scroll-wheel { 0%, 100% { transform: translateY(0); opacity: 1; } 50% { transform: translateY(5px); opacity: .35; } }
+      .rise-in { animation: rise-in .8s cubic-bezier(.2,.7,.2,1) both; }
+      .rise-delay-1 { animation-delay: .12s; }
+      .rise-delay-2 { animation-delay: .24s; }
+      .rise-delay-3 { animation-delay: .36s; }
+      .scroll-wheel { animation: scroll-wheel 1.4s ease-in-out infinite; }
+    </style>
+  </head>
+  <body class="m-0 bg-[#15191f] text-white antialiased">
+    <main class="relative isolate flex min-h-[100svh] w-full items-center justify-center overflow-hidden">
+      <!-- The supplied image provides the architectural backdrop; the overlays keep the copy crisp. -->
+      <div aria-hidden="true" class="absolute inset-0 -z-20 bg-cover bg-center" style="background-image:url('../section_hero_img.png')"></div>
+      <div aria-hidden="true" class="absolute inset-0 -z-10 bg-[#10141b]/75"></div>
+      <div aria-hidden="true" class="absolute inset-0 -z-10 bg-gradient-to-b from-[#10141b]/35 via-transparent to-[#10141b]/45"></div>
+
+      <header class="absolute inset-x-0 top-0 z-10 flex h-[76px] items-center justify-between border-b border-white/[0.04] px-6 sm:px-8 lg:px-10">
+        <a href="#home" aria-label="Travis-Lee home" class="flex h-8 items-center text-white">
+          <svg viewBox="0 0 43 25" class="h-[25px] w-[43px]" fill="none" aria-hidden="true">
+            <path d="M1 2h15v4H11v15H6V6H1V2Z" fill="currentColor"/>
+            <path d="M18 7h23v14H18V7Zm4 4v6h3v-6h-3Zm5 0v6h3v-6h-3Zm5 0v6h5v-6h-5Z" fill="currentColor"/>
+          </svg>
+        </a>
+
+        <nav aria-label="Main navigation" class="hidden items-center gap-8 text-[9px] font-medium uppercase tracking-[.02em] md:flex lg:gap-10">
+          <a href="#about" class="transition-colors hover:text-white/60">About</a>
+          <a href="#real-estate" class="transition-colors hover:text-white/60">International Real Estate</a>
+          <a href="#buy-sell" class="transition-colors hover:text-white/60">Buy &amp; Sell</a>
+          <a href="#contact" class="transition-colors hover:text-white/60">Contact</a>
+          <a href="#connect" class="bg-white px-6 py-[11px] text-[9px] font-semibold text-[#252a30] transition-colors hover:bg-white/85">Let’s Connect</a>
+        </nav>
+        <button type="button" aria-label="Open menu" class="grid h-[34px] w-[34px] place-items-center border border-white/30 text-white md:hidden">
+          <span class="flex w-3.5 flex-col gap-[4px]"><i class="h-px w-full bg-current"></i><i class="h-px w-full bg-current"></i></span>
+        </button>
+      </header>
+
+      <section id="home" class="mx-auto w-full px-5 pt-6 text-center sm:px-8">
+        <h1 class="rise-in text-[clamp(2.35rem,6vw,3.95rem)] font-normal leading-[1.08] tracking-[-.055em] text-[#f8f8f8]">Hi, I’m Travis-Lee</h1>
+        <p class="rise-in rise-delay-1 mx-auto mt-3 max-w-3xl text-[13px] font-normal leading-relaxed text-white/85 sm:text-[14px]">I help buyers, sellers, and investors navigate the Dallas real estate market with confidence.</p>
+        <div class="rise-in rise-delay-2 mt-5 flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-3">
+          <a href="#listings" class="flex h-[42px] w-[200px] items-center justify-center border border-white/80 text-[9px] font-medium uppercase text-white transition-colors hover:bg-white hover:text-[#252a30]">Browse Listings</a>
+          <a href="#consultation" class="flex h-[42px] w-[200px] items-center justify-center bg-white text-[9px] font-semibold uppercase text-[#292d32] transition-colors hover:bg-white/85">Schedule a Consultation</a>
+        </div>
+      </section>
+
+      <a href="#about" class="rise-in rise-delay-3 absolute bottom-5 left-1/2 flex -translate-x-1/2 flex-col items-center gap-1.5 text-[7px] font-medium uppercase tracking-[.12em] text-white/90">
+        <span class="flex h-[18px] w-[10px] items-start justify-center rounded-full border border-white/75 p-[3px]"><i class="scroll-wheel h-[4px] w-[2px] rounded-full bg-white"></i></span>
+        Scroll More
+      </a>
+    </main>
+  </body>
+</html>
